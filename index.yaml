@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  openedai-speech:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-09-06T20:57:14.756438112Z"
+    description: A Helm chart for Kubernetes
+    digest: b08850092172bc7e2f4400b6faa276866a65fb3f22bf33aa74a96a12f796ad1f
+    name: openedai-speech
+    type: application
+    urls:
+    - https://github.com/kdhlab/helm-charts/releases/download/openedai-speech-0.1.1/openedai-speech-0.1.1.tgz
+    version: 0.1.1
+generated: "2024-09-06T20:57:14.756444824Z"
