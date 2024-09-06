@@ -1,16 +1,17 @@
-name: Lint and Test Charts
+name: Helm Lint and Test Charts
 
 on:
   pull_request:
     paths:
-      - 'stable/**'
+      - 'charts/**'
 
 jobs:
   lint-chart:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
+
       - name: Run chart-testing (lint)
         uses: helm/chart-testing-action@main
         with:
@@ -24,11 +25,12 @@ jobs:
     strategy:
       matrix:
         k8s:
-          - v1.28.13
-
+          - v1.27
+          - v1.28
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
+
       - name: Run kubeval
         env:
           KUBERNETES_VERSION: ${{ matrix.k8s }}
@@ -43,14 +45,17 @@ jobs:
     strategy:
       matrix:
         k8s:
-          - v1.28.13
+          - v1.27
+          - v1.28
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
+
       - name: Create kind ${{ matrix.k8s }} cluster
         uses: helm/kind-action@main
         with:
           node_image: kindest/node:${{ matrix.k8s }}
+
       - name: Run chart-testing (install)
         uses: helm/chart-testing-action@main
         with:
