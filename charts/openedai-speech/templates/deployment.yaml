@@ -44,7 +44,7 @@ spec:
             exec:
               command:
               - cat
-              - /tmp/healthy
+              - /tmp
             initialDelaySeconds: 30
             periodSeconds: 3
           readinessProbe:
