@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: siutin/stable-diffusion-webui-docker
+  repository: universonic/stable-diffusion-webui
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: latest-cuda-12.2.0
+  tag: latest
 
 imagePullSecrets: []
 nameOverride: ""
