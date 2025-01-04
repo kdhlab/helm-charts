@@ -14,6 +14,6 @@ spec:
     - port: {{ .Values.service.api.port }}
       targetPort: 7860
       protocol: TCP
-      name: apu
+      name: api
   selector:
     {{- include "stable-diffusion-webui.selectorLabels" . | nindent 4 }}
