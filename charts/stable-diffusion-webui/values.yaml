@@ -8,7 +8,7 @@ image:
   repository: siutin/stable-diffusion-webui-docker
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: latest-cuda-12.0.0
+  tag: latest-cuda-12.2.0
 
 imagePullSecrets: []
 nameOverride: ""
@@ -41,7 +41,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 7860
+  port: 8080
 
 ingress:
   enabled: false
