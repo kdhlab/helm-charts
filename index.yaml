@@ -104,6 +104,16 @@ entries:
   stable-diffusion-webui:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2025-01-04T06:18:52.096210277Z"
+    description: A Helm chart for Kubernetes
+    digest: 8ee2c55ca88cd9ed97455b853f4a699aaf2d85799764070bcd23375f84b80977
+    name: stable-diffusion-webui
+    type: application
+    urls:
+    - https://github.com/kdhlab/helm-charts/releases/download/stable-diffusion-webui-0.1.13/stable-diffusion-webui-0.1.13.tgz
+    version: 0.1.13
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2025-01-04T06:04:42.396024023Z"
     description: A Helm chart for Kubernetes
     digest: 1167990e7a0b53fcc2c504bb37267f7f54a3b087f872bbb892dada45b7b7bf1d
@@ -222,4 +232,4 @@ entries:
     urls:
     - https://github.com/kdhlab/helm-charts/releases/download/stable-diffusion-webui-0.1.1/stable-diffusion-webui-0.1.1.tgz
     version: 0.1.1
-generated: "2025-01-04T06:04:42.396100456Z"
+generated: "2025-01-04T06:18:52.096336432Z"
