@@ -40,12 +40,8 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  ui:
-    type: ClusterIP
-    port: 8080
-  api:
-    type: ClusterIP
-    port: 7860
+  type: ClusterIP
+  port: 8080
 
 ingress:
   enabled: false

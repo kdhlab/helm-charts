@@ -7,13 +7,9 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.ui.port }}
+    - port: {{ .Values.service.port }}
       targetPort: 8080
       protocol: TCP
       name: ui
-    - port: {{ .Values.service.api.port }}
-      targetPort: 7860
-      protocol: TCP
-      name: api
   selector:
     {{- include "stable-diffusion-webui.selectorLabels" . | nindent 4 }}
